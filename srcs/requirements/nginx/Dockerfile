@@ -1,7 +1,14 @@
 
 FROM		debian:buster
 
-RUN apt update && apt upgrade -y && apt install nginx vim curl -y
+RUN apt update \
+    && apt upgrade -y \
+    && apt install -y \
+        nginx \
+        vim \
+        curl \
+    && 
+
 # RUN apt update && apt upgrade -y && apt install nginx -y vim -y curl -y
 # RUN			apk update && apk upgrade && apk add	\
 # 							openssl			\

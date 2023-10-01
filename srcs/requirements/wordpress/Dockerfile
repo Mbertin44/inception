@@ -11,8 +11,8 @@ RUN apt update -y \
         mariadb-client
 
 # ---------------------- # Étape 2 : Installation de wordpress ----------------------
-RUN wget https://fr.wordpress.org/wordpress-6.3.1-fr_FR.tar.gz -P /var/www\
+RUN wget https://fr.wordpress.org/wordpress-6.3.1-fr_FR.tar.gz -P /var/www \
     && cd /var/www\
-    && tar -xzf wordpress-6.0-fr_FR.tar.gz\
-    && rm wordpress-6.0-fr_FR.tar.gz\
+    && tar -xzf wordpress-6.3.1-fr_FR.tar.gz\
+    && rm wordpress-6.3.1-fr_FR.tar.gz\
     && chown -R root:root /var/www/wordpress\

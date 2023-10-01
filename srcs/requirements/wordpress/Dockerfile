@@ -5,6 +5,7 @@ RUN apt update -y \
     && apt upgrade -y \
     && apt-get -y install \
         wget\
+        #derniere version pour debian buster
         php7.3\
         php-fpm\
         php-mysql\

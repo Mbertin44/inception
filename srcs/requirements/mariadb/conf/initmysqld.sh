@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mysqld
+mysqld & 
 # Je laisse le temps a mysql de ce lancer 
 # Je crée la base de donnée
 mysql --wait -e "CREATE DATABASE IF NOT EXISTS \`${SQL_DATABASE}\`;" 
@@ -13,7 +13,7 @@ mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '${SQL_ROOT_PASSWORD}';"
 # #e recharge les privilèges d'utilisateur pour appliquer immédiatement les modifications
 mysql -e "FLUSH PRIVILEGES;"
 # J'arrête le service MySQL
-mysqladmin -u root -p$SQL_ROOT_PASSWORD shutdown
+mysqladmin -u root -p$SQL_ROOT_PASSWORD -S /var/run/mysqld/mysqld.sock shutdown
 # J'attend que le serveur MySQL soit prêt
 mysql --wait
 # J'exécute le serveur MySQL en arrière-plan (pas sur que ca soit nécéssaire)

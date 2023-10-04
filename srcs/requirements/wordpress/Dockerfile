@@ -30,7 +30,7 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
     # Je rend le fichier executable
     && chmod +x wp-cli.phar\
     # Je deplace le fichier dans les binaires
-    && mv wp-cli.phar /usr/local/bin/wp
+    && mv wp-cli.phar /usr/local/bin/wp-cli.phar
 
 # Configuration de wordpress
 COPY conf/auto_config.sh /usr/local/bin/auto_config.sh

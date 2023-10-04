@@ -50,14 +50,17 @@ volumes:
     driver_opts:
       type: 'none' 									# aucun type spécifique
       o: 'bind'
-      device: '/Users/mbertin/data/wordpress' 		#Ou stocker le dossier sur votre ordinateur en local ----------------------- A CHANGER SUR LA VM -----------------------
+      device: '/Users/admin/data/wordpress' 		#Ou stocker le dossier sur votre ordinateur en local ----------------------- A CHANGER SUR LA VM -----------------------
   mariadb:
     driver: local
     driver_opts:
       type: 'none' 
       o: 'bind'										 # Les Bind Mounts sont des volumes qui se montent sur un chemin d'accès à l'hôte, et ils peuvent être modifiés par d'autres processus en dehors de docker.
-      device: '/Users/mbertin/data/mariadb'			#Ou stocker le dossier sur votre ordinateur en local ----------------------- A CHANGER SUR LA VM -----------------------
+      device: '/Users/admin/data/mariadb'			#Ou stocker le dossier sur votre ordinateur en local ----------------------- A CHANGER SUR LA VM -----------------------
   
 networks:
     inception:
       driver: bridge # bridge  indique a Docker d’installer automatiquement des règles qui permettront aux 3 containers de communiquer en bridge.
+      
+      
+      

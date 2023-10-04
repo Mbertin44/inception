@@ -36,8 +36,6 @@ RUN wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
 COPY conf/auto_config.sh /usr/local/bin/auto_config.sh
 RUN mkdir -p /run/php
 RUN chmod +x /usr/local/bin/auto_config.sh
-COPY /conf/wp-config.php /var/www/wordpress
-RUN chmod 777 /var/www/wordpress/wp-config.php
 
 ENTRYPOINT ["/bin/sh", "/usr/local/bin/auto_config.sh"]
 

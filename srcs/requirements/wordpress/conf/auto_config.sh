@@ -22,8 +22,8 @@ if [ ! -f "$wp_config_file" ]; then
 
     # --------------------- 2eme étape : Création de la page ---------------------
     echo "Création de la page"
-    wp --allow-root core install \
-        --url='https://mbertin.42.fr' \
+    /usr/local/bin/wp-cli.phar --allow-root core install \
+        --url='https://localhost' \
         --title="$WP_TITLE" \
         --admin_user="$WP_ADMIN" \
         --admin_password="$WP_ADMIN_PASSWORD" \
@@ -31,13 +31,14 @@ if [ ! -f "$wp_config_file" ]; then
         --path='/var/www/wordpress/'
 
     # --------------------- 3eme étape : Ajout d'un utilisateur ---------------------
-    echo "Création d'un nouvelle utilisateur"
-    wp --allow-root user create \
+    echo "Création d'un nouvel utilisateur"
+    /usr/local/bin/wp-cli.phar --allow-root user create \
         "$WP_USER" \
         "$WP_USER_EMAIL" \
         --role=author \
         --user_pass="$WP_USER_PASSWORD" \
         --path='/var/www/wordpress/'
+    echo "Pour verifier la création du deuxieme utilisateur, allez à l'adresse localhost/wp-login.php"
 fi
 
 echo "Execution de php-fpm"

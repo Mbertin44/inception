@@ -59,7 +59,7 @@ volumes:
       device: '/Users/mbertin/data/mariadb'			#Ou stocker le dossier sur votre ordinateur en local ----------------------- A CHANGER SUR LA VM -----------------------
   
 networks:
-    inception:
+    inception: # Le nom de mon network
       driver: bridge # bridge  indique a Docker d’installer automatiquement des règles qui permettront aux 3 containers de communiquer en bridge.
       
       

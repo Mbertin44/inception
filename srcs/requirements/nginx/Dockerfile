@@ -25,8 +25,8 @@ RUN mkdir -p /etc/nginx/ssl \
         # l'endroit ou on souhaite la clé du certificat SSL
         -keyout /etc/nginx/ssl/inception.key \
         # préremplir les informations du certificat SSL
-        -subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=login.42.fr/UID=login"
-
+        -subj "/C=CA/ST=QC/L=Québec/O=42/OU=42/CN=mbertin.42.fr/UID=mbertin"
+        
 # ------------------------------- # Étape 3 : Configuration de NGINX -------------------------------
 RUN mkdir -p /var/run/nginx
 

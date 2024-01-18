@@ -41,6 +41,11 @@ docker:	$(SRCS)
 	@mkdir -p $(DIR_WP)
 	@echo "$(LGREEN)Directories Creation Completed.$(NC)"
 	@$(DC) -f $(SRCS) up --build --remove-orphans -d
+	@echo "$(LGREEN)All the services are ready.$(NC)"
+	@echo "$(LYELLOW)Go to https://mbertin.42.fr to see the website"
+	@echo "If you land on a nginx error, be sure to check if the wordpress container is ready."
+	@echo "Use 'mysql -u db_user -p db_name' inside the mariadb container to connect to the CLI database."
+	@echo "Don't forget to add '127.0.0.1 mbertin.42.fr' at the end of the etc/hosts file.$(NC)"
 
 clean:
 	@$(DC) -f $(SRCS) stop

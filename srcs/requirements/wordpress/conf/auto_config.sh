@@ -43,4 +43,3 @@ fi
 
 echo "Execution de php-fpm"
 /usr/sbin/php-fpm7.3 -F 
-

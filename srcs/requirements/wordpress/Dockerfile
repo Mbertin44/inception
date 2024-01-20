@@ -39,9 +39,4 @@ RUN chmod +x /usr/local/bin/auto_config.sh
 
 ENTRYPOINT ["/bin/sh", "/usr/local/bin/auto_config.sh"]
 
-# Je démarre PHP-FPM
-#Peut être mettre ca en place dans le docker compose
-# RUN /usr/sbin/php-fpm7.3 -F 
-
-#Peut etre pas necessaire si j'execute php-fpm dans le docker compose
 EXPOSE 9000

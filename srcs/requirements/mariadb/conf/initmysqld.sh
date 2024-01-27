@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Demarrage de mysql in background (&)
+#Demarrage de mysql
 mysqld &
 
 sleep 10

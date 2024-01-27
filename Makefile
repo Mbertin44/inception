@@ -46,6 +46,7 @@ docker:	$(SRCS)
 	@echo "If you land on a nginx error, be sure to check if the wordpress container is ready."
 	@echo "Use 'mysql -u db_user -p db_name' inside the mariadb container to connect to the CLI database."
 	@echo "Don't forget to add '127.0.0.1 mbertin.42.fr' at the end of the etc/hosts file."
+	@echo "Pour verifier la création du deuxieme utilisateur, allez à l'adresse localhost/wp-login.php"
 	@echo "To use the terminal of a container you can use 'docker exec -it <nom_du_conteneur> /bin/sh' $(NC)"
 
 clean:

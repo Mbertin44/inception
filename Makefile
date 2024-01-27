@@ -16,8 +16,8 @@ NETWORK = inception
 RM_IMAGES = docker image rm $(IMAGES)
 RM_VOL = docker volume rm -f $(VOLUMES)
 
-DIR_MDB = /Users/mbertin/data/mariadb
-DIR_WP = /Users/mbertin/data/wordpress
+DIR_MDB = /home/mbertin/data/mariadb
+DIR_WP = /home/mbertin/data/wordpress
 
 SRCS =	srcs/docker-compose.yml
 

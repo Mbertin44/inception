@@ -45,7 +45,7 @@ docker:	$(SRCS)
 	@echo "$(LYELLOW)Go to https://mbertin.42.fr to see the website"
 	@echo "If you land on a nginx error, be sure to check if the wordpress container is ready."
 	@echo "Use 'mysql -u db_user -p db_name' inside the mariadb container to connect to the CLI database."
-	@echo "Don't forget to add '127.0.0.1 mbertin.42.fr' at the end of the etc/hosts file.$"
+	@echo "Don't forget to add '127.0.0.1 mbertin.42.fr' at the end of the etc/hosts file."
 	@echo "To use the terminal of a container you can use 'docker exec -it <nom_du_conteneur> /bin/sh' $(NC)"
 
 clean:
